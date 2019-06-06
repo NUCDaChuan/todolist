@@ -3,8 +3,8 @@ window.addEventListener('load',function () {
     let prev=0;
     let type="all";
     let dotolist=[{id:1,content:'今天也是充满希望的一天',ctime:'2019/6/4',status:false},
-        {id:2,content:'中午去办水卡',ctime:'2019/6/5',status:false},
-        {id:3,content:'下了课取快递',ctime:'2019/6/6',status:true},
+        {id:2,content:'中午去办水卡',ctime:'2019/6/6',status:false},
+        {id:3,content:'下了课取快递',ctime:'2019/6/4',status:true},
         {id:4,content:'晚上去开班会',ctime:'2019/6/7',status:false},
     ];
 
@@ -12,7 +12,7 @@ window.addEventListener('load',function () {
     if(!str){
         saveDate();
         str=localStorage.getItem('dotolist');
-    }
+}
     dotolist=JSON.parse(str);
     let content=document.querySelector('.content');
     function render(arr){
