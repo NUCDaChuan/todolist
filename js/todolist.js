@@ -88,7 +88,12 @@ window.addEventListener('load',function () {
         render(filterData(type));
     }
     function createObj(){
-        let id=dotolist[dotolist.length-1].id+1;
+        let id;
+        if(!dotolist[dotolist.length-1]){
+          id=1;
+        }else{
+            id=dotolist[dotolist.length-1].id+1;
+        }
         let content=textBtn.value;
         let ctime=new Date().toLocaleDateString();
         let status=false;
